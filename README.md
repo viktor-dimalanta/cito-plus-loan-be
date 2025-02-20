@@ -145,11 +145,19 @@ npm run format
 
 # Testing
 
-Running Unit Tests
-To run unit tests for the backend, make sure you have installed all dependencies and then run:
-
+Run all tests:
 ```
 npm run test
+```
+
+Run only unit tests:
+```
+npx jest __tests__/unit
+```
+
+Run only integration tests:
+```
+npx jest __tests__/integration
 ```
 
 # License
