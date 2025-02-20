@@ -11,7 +11,7 @@ export class LoanController {
     }
   }
 
-  static async getAllLoans(req: Request, res: Response) {
+  static async getAllLoans(req: any, res: Response) {
     const loans = await LoanService.getAllLoans();
     res.json(loans);
   }

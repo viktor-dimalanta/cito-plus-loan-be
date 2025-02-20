@@ -1,12 +1,14 @@
 import { Loan } from "@prisma/client";
 import prisma from "../config/database";
+import  { uuid } from 'uuidv4'
 
 export class LoanService {
-  static async createLoan(data: { applicantName: string; requestedAmount: number }): Promise<Loan> {
+  static async createLoan(data: { applicantName: string; requestedAmount: string }): Promise<Loan> {
     return await prisma.loan.create({
       data: {
+        id: uuid(),
         applicantName: data.applicantName,
-        requestedAmount: data.requestedAmount,
+        requestedAmount: parseInt(data.requestedAmount),
         status: "PENDING",
       },
     });

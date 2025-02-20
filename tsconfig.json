@@ -3,6 +3,7 @@
       "target": "ES2020",                   // Set the ECMAScript version
       "module": "NodeNext",                  // Use NodeNext module system
       "moduleResolution": "NodeNext",        // Use NodeNext resolution strategy
+      "types": ["jest", "node", "express"],
       "esModuleInterop": true,               // Allow default imports from modules without default exports
       "skipLibCheck": true,                  // Skip type checking of declaration files
       "forceConsistentCasingInFileNames": true,
@@ -22,4 +23,3 @@
       "dist"                                 // Exclude `dist` directory (where compiled files go)
     ]
   }
-  
