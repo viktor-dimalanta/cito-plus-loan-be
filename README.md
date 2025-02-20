@@ -131,6 +131,15 @@ Delete an existing loan application.
 SELECT * FROM "Loan" LIMIT 10; = (show data in table)
 ```
 
+# Addtional Features
+
+### ESLint
+```
+npm install --save-dev eslint prettier eslint-plugin-prettier eslint-config-prettier
+npx eslint --init
+```
+
+
 # Testing
 
 Running Unit Tests
