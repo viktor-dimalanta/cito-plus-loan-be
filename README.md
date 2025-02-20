@@ -134,7 +134,8 @@ npm run test
 
 Developed by 
 
-Viktor Angelo Dimalanta
+Viktor Angelo Dimalanta, MSIT
+https://www.linkedin.com/in/viktor-dimalanta-msit/
 
 
 
