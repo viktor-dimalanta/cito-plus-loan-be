@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+      "target": "ES2020",                   // Set the ECMAScript version
+      "module": "NodeNext",                  // Use NodeNext module system
+      "moduleResolution": "NodeNext",        // Use NodeNext resolution strategy
+      "esModuleInterop": true,               // Allow default imports from modules without default exports
+      "skipLibCheck": true,                  // Skip type checking of declaration files
+      "forceConsistentCasingInFileNames": true,
+      "outDir": "./dist",                    // Output directory for compiled JS files
+      "strict": true,                        // Enable strict type-checking
+      "resolveJsonModule": true,             // Allow importing JSON modules
+      "baseUrl": ".",                        // Base directory for resolving non-relative module names
+      "paths": {
+        "*": ["node_modules/*"]              // Path mappings to resolve module imports
+      }
+    },
+    "include": [
+      "src/**/*.ts"                          // Include all TypeScript files in the `src` folder
+    ],
+    "exclude": [
+      "node_modules",                        // Exclude `node_modules` directory
+      "dist"                                 // Exclude `dist` directory (where compiled files go)
+    ]
+  }
+  
