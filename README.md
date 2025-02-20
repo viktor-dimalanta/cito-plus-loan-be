@@ -137,6 +137,9 @@ SELECT * FROM "Loan" LIMIT 10; = (show data in table)
 ```
 npm install --save-dev eslint prettier eslint-plugin-prettier eslint-config-prettier
 npx eslint --init
+npm run lint
+npm run lint:fix
+npm run format
 ```
 
 
