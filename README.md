@@ -121,6 +121,16 @@ Update an existing loan application (e.g., change status, applicant name, or req
 #### DELETE /loans/:id
 Delete an existing loan application.
 
+# Postgres Command
+
+```
+\l = (list database)
+\c loan-db (use database)
+\dt (list table)
+\d "Loan" = (show table structure)
+SELECT * FROM "Loan" LIMIT 10; = (show data in table)
+```
+
 # Testing
 
 Running Unit Tests
