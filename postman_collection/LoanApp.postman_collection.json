@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "2a8695eb-19fc-4ee9-9a66-1f438593be07",
+		"name": "LoanApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3192550"
+	},
+	"item": [
+		{
+			"name": "get_loans",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/loans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"loans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_loan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"applicantName\": \"Dave\",\r\n  \"requestedAmount\": 32332,\r\n  \"status\": \"Approved\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/loans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"loans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_specific_loans",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/loans/7a76f392-b2f2-490c-a931-2383160c237c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"loans",
+						"7a76f392-b2f2-490c-a931-2383160c237c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_loan",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"status\": \"Aapproves\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/loans/7a76f392-b2f2-490c-a931-2383160c237c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"loans",
+						"7a76f392-b2f2-490c-a931-2383160c237c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
