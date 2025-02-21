@@ -1,4 +1,6 @@
+// @ts-ignore
 import express from "express";
+// @ts-ignore
 import cors from "cors";
 import loanRoutes from "./routes/loan.routes"; // ✅ Correct import (default export)
 
@@ -12,6 +14,7 @@ app.use(express.json());
 app.use("/loans", loanRoutes);
 
 // Default route
+// @ts-ignore
 app.get("/", (req, res) => {
   res.send("Loan Application API is running...");
 });

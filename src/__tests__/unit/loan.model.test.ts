@@ -1,21 +1,56 @@
-import { LoanController } from '../../controllers/loan.controller';
-// import { Loan } from '../../src/models/loan.model';
-import { expect, it, describe } from '@jest/globals'
+import { PrismaClient } from "@prisma/client";
 
-describe('Loan Model', () => {
-//   it('should create a Loan instance', () => {
-//     const loan = new Loan('John Doe', 1000, 'PENDING');
-//     expect(loan).toHaveProperty('id');
-//     expect(loan.applicantName).toBe('John Doe');
-//     expect(loan.requestedAmount).toBe(1000);
-//     expect(loan.status).toBe('
-//   });
-  it('it should be able to gell all loans', async () => {
-    const response = await LoanController.getAllLoans("", "")
-    expect(response).toBeTruthy()
-    expect
-  })
+const prisma = new PrismaClient();
 
+describe("Loan Model", () => {
+  afterAll(async () => {
+    await prisma.$disconnect();
+  });
+
+  it("should create a Loan record", async () => {
+    const loan = await prisma.loan.create({
+      data: {
+        applicantName: "John Doe",
+        requestedAmount: 5000,
+        status: "PENDING",
+      },
+    });
+
+    expect(loan).toHaveProperty("id");
+    expect(loan.applicantName).toBe("John Doe");
+    expect(loan.requestedAmount).toBe(5000);
+    expect(loan.status).toBe("PENDING");
+  });
+
+  it("should retrieve a Loan record", async () => {
+    const loan = await prisma.loan.findFirst({
+      where: { applicantName: "John Doe" },
+    });
+
+    expect(loan).not.toBeNull();
+    expect(loan?.applicantName).toBe("John Doe");
+  });
+
+  it("should update a Loan record", async () => {
+    const updatedLoan = await prisma.loan.updateMany({
+      where: { applicantName: "John Doe" },
+      data: { status: "APPROVED" },
+    });
+
+    expect(updatedLoan.count).toBeGreaterThan(0);
+
+    const loan = await prisma.loan.findFirst({
+      where: { applicantName: "John Doe" },
+    });
+
+    expect(loan?.status).toBe("APPROVED");
+  });
+
+  it("should delete a Loan record", async () => {
+    const deletedLoan = await prisma.loan.deleteMany({
+      where: { applicantName: "John Doe" },
+    });
+
+    expect(deletedLoan.count).toBeGreaterThan(0);
+  });
 });
-
-

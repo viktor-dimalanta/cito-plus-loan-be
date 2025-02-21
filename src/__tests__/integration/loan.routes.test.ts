@@ -1,3 +1,4 @@
+// @ts-ignore
 import request from 'supertest';
 import app from "../../app"; // Adjust based on the test file's location
 

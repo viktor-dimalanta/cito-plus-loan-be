@@ -1,3 +1,4 @@
+// @ts-ignore
 import { Router } from "express";
 import {LoanController} from "../controllers/loan.controller"; // ✅ Ensure correct import
 

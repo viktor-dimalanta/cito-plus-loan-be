@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+// @ts-ignore
 const express_1 = require("express");
 const loan_controller_1 = require("../controllers/loan.controller"); // ✅ Ensure correct import
 const router = (0, express_1.Router)();

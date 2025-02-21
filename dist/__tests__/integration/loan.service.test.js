@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+// @ts-ignore
 const loan_service_1 = require("@services/loan.service");
 describe('Loan Service', () => {
     let loanService;

@@ -1,4 +1,6 @@
+// @ts-ignore
 import express from "express";
+// @ts-ignore
 import cors from "cors";
 import dotenv from "dotenv";
 import loanRoutes from "./routes/loan.routes"; // ✅ Correct import (default export)

@@ -9,7 +9,12 @@ class LoanController {
             res.status(201).json(loan);
         }
         catch (error) {
-            res.status(400).json({ message: error.message });
+            if (error instanceof Error) {
+                res.status(400).json({ message: error.message });
+            }
+            else {
+                res.status(400).json({ message: 'An unknown error occurred' });
+            }
         }
     }
     static async getAllLoans(req, res) {
@@ -24,7 +29,12 @@ class LoanController {
             res.json(loan);
         }
         catch (error) {
-            res.status(400).json({ message: error.message });
+            if (error instanceof Error) {
+                res.status(400).json({ message: error.message });
+            }
+            else {
+                res.status(400).json({ message: 'An unknown error occurred' });
+            }
         }
     }
     static async updateLoan(req, res) {
@@ -33,7 +43,12 @@ class LoanController {
             res.json(updatedLoan);
         }
         catch (error) {
-            res.status(400).json({ message: error.message });
+            if (error instanceof Error) {
+                res.status(400).json({ message: error.message });
+            }
+            else {
+                res.status(400).json({ message: 'An unknown error occurred' });
+            }
         }
     }
     static async deleteLoan(req, res) {
@@ -42,7 +57,12 @@ class LoanController {
             res.status(204).send();
         }
         catch (error) {
-            res.status(400).json({ message: error.message });
+            if (error instanceof Error) {
+                res.status(400).json({ message: error.message });
+            }
+            else {
+                res.status(400).json({ message: 'An unknown error occurred' });
+            }
         }
     }
 }

@@ -5,12 +5,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LoanService = void 0;
 const database_1 = __importDefault(require("../config/database"));
+const uuidv4_1 = require("uuidv4");
 class LoanService {
     static async createLoan(data) {
         return await database_1.default.loan.create({
             data: {
+                id: (0, uuidv4_1.uuid)(),
                 applicantName: data.applicantName,
-                requestedAmount: data.requestedAmount,
+                requestedAmount: parseInt(data.requestedAmount),
                 status: "PENDING",
             },
         });
