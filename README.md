@@ -160,6 +160,9 @@ Run only integration tests:
 npx jest __tests__/integration
 ```
 
+![image](https://github.com/user-attachments/assets/8e9ecde8-6153-4e46-910f-0e1312f64c2c)
+
+
 # License
 
 Developed by 
