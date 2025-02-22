@@ -27,7 +27,7 @@ Follow these steps to set up the project locally.
 
 ```bash
 git clone https://github.com/viktor-dimalanta/cito-plus-loan-be.git
-cd loan-api
+cd cito-plus-loan-be
 ```
 
 ### Step 2: Install dependencies
