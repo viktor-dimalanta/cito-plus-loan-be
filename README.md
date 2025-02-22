@@ -1,8 +1,7 @@
 ## Cito-Plus-BE ##
 
 A simple microservice (REST API) using Node.js and TypeScript that interacts with a
-PostgreSQL database to manage “loan applications.” Then build a basic frontend (e.g.,
-React, Vue, or Angular) that consumes this API and allows basic operations on loan
+PostgreSQL database to manage “loan applications.” The front-end developed using ReactJS that consumes this API and allows basic operations on loan
 applications.
 
 ## Table of Contents
