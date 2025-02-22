@@ -25,7 +25,10 @@ export class LoanService {
   static async updateLoan(id: string, data: Partial<Loan>): Promise<Loan | null> {
     return await prisma.loan.update({
       where: { id },
-      data,
+      data: {
+        ...data,
+        requestedAmount: data.requestedAmount ? parseInt(data.requestedAmount as unknown as string) : undefined,
+      },
     });
   }
 
